@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>The Cost of Being Small</title>
+<title>Big Enough to Be Brave</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;600&family=Noto+Nastaliq+Urdu:wght@400;600&display=swap" rel="stylesheet">
@@ -215,6 +215,24 @@ svg text{font-family:"IBM Plex Mono",monospace;fill:var(--dim);font-weight:500}
   font-size:clamp(20px,calc(1.2vw + 1.2vh),32px);color:var(--ink);letter-spacing:-.02em}
 .clip-by{font-family:"IBM Plex Mono",monospace;font-size:12.5px;letter-spacing:.1em;color:var(--dim);margin-top:.6rem}
 .clip-note{font-size:clamp(13px,calc(.62vw + .62vh),16.5px);line-height:1.5;color:var(--dim);margin-top:.9rem}
+
+.refline{font-family:"IBM Plex Mono",monospace;font-size:clamp(11px,1.05vw,13.5px);
+  line-height:1.5;color:var(--dim);margin-top:1rem;padding-top:.65rem;
+  border-top:1px solid rgba(0,0,0,.14);max-width:62ch}
+
+.qrblock{display:flex;align-items:center;gap:clamp(12px,1.5vw,22px);margin-top:1.2rem;
+  padding:.85rem 1rem;background:rgba(255,255,255,.6);border:1px solid rgba(0,0,0,.16)}
+.qr{width:clamp(74px,7.5vw,104px);height:auto;flex:0 0 auto;shape-rendering:crispEdges}
+.qr-t{font-family:"IBM Plex Mono",monospace;font-size:clamp(12px,1.15vw,15px);
+  letter-spacing:.04em;color:var(--ink);font-weight:500}
+.qr-s{font-family:"IBM Plex Mono",monospace;font-size:11.5px;line-height:1.6;color:var(--dim);margin-top:.35rem}
+
+.devbox{opacity:0;animation:rise .9s cubic-bezier(.16,.9,.24,1) 2.6s both;text-align:center}
+.devbox img{width:100%;max-width:200px;height:auto;display:block;margin:0 auto}
+.dev-t{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:26px;
+  color:var(--accent);letter-spacing:-.02em;margin-top:.2rem}
+.dev-s{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.09em;
+  text-transform:uppercase;color:var(--dim);margin-top:.15rem}
 
 /* ---------- section dividers ---------- */
 .sectdiv{max-width:34ch}
@@ -437,8 +455,8 @@ notes:'Title does the work — say it, pause, then go straight into the nushdaru
 html:`<div class="split" style="height:100%;align-items:center">
  <div>
  <div class="eyebrow cine" style="--del:.1s">Medical Grand Rounds</div>
- <h1 class="cine" style="--del:.3s">The Cost of<br>Being Small</h1>
- <p class="lede sub cine" style="--del:.85s">A small programme cannot afford to take chances. Growing one is what makes innovation possible, and our patients pay the difference.</p>
+ <h1 class="cine" style="--del:.3s">Big Enough<br>to Be Brave</h1>
+ <p class="lede sub cine" style="--del:.85s">What volume made possible: the harder donor, the harder patient, the trial worth running, and the room to be wrong occasionally and survive it.</p>
  <div class="sub cine" style="--del:1.25s">
   <div class="byline">
    <div class="person">
@@ -647,20 +665,20 @@ html:`<div class="split" style="align-items:center">
  </div>
 
  <div class="stagew"><svg viewBox="0 0 470 348" aria-label="Race of transplant recipients 2024 to July 2026">
-  <text x="0" y="12" class="lab" style="font-size:12px">RECIPIENTS BY RACE &#183; 2024 TO JULY 2026 &#183; n = 121</text>
-  ${[['White',76,'62.8',196,'var(--slate)',.3],
-     ['South Asian',14,'11.6',36,'var(--cyan)',.55],
-     ['East and Southeast Asian',12,'9.9',31,'var(--cyan)',.8],
-     ['Middle Eastern',8,'6.6',21,'var(--cyan)',1.05],
-     ['Black',5,'4.1',13,'var(--cyan)',1.3],
+  <text x="0" y="12" class="lab" style="font-size:11.5px">RECIPIENTS BY RACE &#183; 2024 TO JULY 2026 &#183; n = 121</text>
+  ${[['White',76,'62.8',170,'var(--slate)',.3],
+     ['South Asian',14,'11.6',31,'var(--cyan)',.55],
+     ['East and SE Asian',12,'9.9',27,'var(--cyan)',.8],
+     ['Middle Eastern',8,'6.6',18,'var(--cyan)',1.05],
+     ['Black',5,'4.1',11,'var(--cyan)',1.3],
      ['Indigenous',2,'1.7',6,'var(--red)',1.55],
      ['Latin American',1,'0.8',5,'var(--cyan)',1.8],
-     ['Not specified',3,'2.5',8,'var(--dim)',2.05]]
+     ['Not specified',3,'2.5',7,'var(--dim)',2.05]]
    .map((r,i)=>`
-   <text x="0" y="${50+i*36}" class="lab" style="font-size:13px;fill:${r[0]==='Indigenous'?'var(--red)':'var(--ink)'}">${r[0]}</text>
-   <rect x="212" y="${37+i*36}" width="${r[3]}" height="19" fill="${r[4]}" class="growx" style="--del:${r[5]}s"/>
-   <text x="${220+r[3]}" y="${51+i*36}" class="lab" style="font-size:13px;fill:${r[4]};opacity:0;animation:rise .6s ease ${r[5]+.7}s both">${r[1]}</text>`).join('')}
-  <text x="0" y="340" class="lab" style="font-size:12px;fill:var(--red);opacity:0;animation:rise .7s ease 2.6s both">TWO INDIGENOUS RECIPIENTS IN THIRTY-ONE MONTHS</text>
+   <text x="0" y="${50+i*36}" class="lab" style="font-size:12.5px;fill:${r[0]==='Indigenous'?'var(--red)':'var(--ink)'}">${r[0]}</text>
+   <rect x="240" y="${37+i*36}" width="${r[3]}" height="19" fill="${r[4]}" class="growx" style="--del:${r[5]}s"/>
+   <text x="${248+r[3]}" y="${51+i*36}" class="lab" style="font-size:13px;fill:${r[4]};opacity:0;animation:rise .6s ease ${r[5]+.7}s both">${r[1]}</text>`).join('')}
+  <text x="0" y="340" class="lab" style="font-size:11.5px;fill:var(--red);opacity:0;animation:rise .7s ease 2.6s both">TWO INDIGENOUS RECIPIENTS IN THIRTY-ONE MONTHS</text>
  </svg></div>
 </div>`},
 
@@ -718,10 +736,8 @@ html:`<div class="split" style="align-items:center">
  <div>
   <div class="eyebrow">What a transplant actually buys</div>
   <h2>A median of fifteen years</h2>
-  <p data-frag>Roughly <strong>90%</strong> alive at one year. <strong>80%</strong> at five. About <strong>half</strong> at ten.</p>
+  <p data-frag>Roughly <strong>90%</strong> alive at one year. <strong>80%</strong> at five. About <strong>two thirds</strong> at ten, and <strong>half</strong> at fifteen.</p>
   <p class="sub" data-frag>For someone dying of heart failure that is an extraordinary offer. It is also, plainly, <em>not a cure</em>. We exchange one fatal disease for a chronic one that has to be managed for the rest of a life.</p>
-  <blockquote class="pullq" data-frag>&ldquo;Organ transplantation is mired in stagnant science and antiquated, imprecise medicine.&rdquo;</blockquote>
-  <p class="sub" data-frag>Amy Silverstein lived thirty-five years with two donor hearts and wrote that weeks before dying of an immunosuppression-related cancer. She acknowledged the irony of a twice-transplanted survivor making the case, and argued that her longevity was precisely what gave her the standing to challenge the status quo.</p>
   <p class="mono sub" data-frag>ISHLT Thoracic Organ Transplant Registry, most recent report. Amy Silverstein, New York Times, 18 April 2023.</p>
  </div>
  <div class="stagew"><svg viewBox="0 0 470 310" aria-label="Survival after adult heart transplantation">
@@ -822,13 +838,43 @@ ${[['Donor','33 F &#183; 159 cm &#183; 76.8 kg &#183; BMI 30.4 &#183; O Pos'],
  </div>
 </div>`},
 
+{heat:0,vol:61,phase:'Off hours',
+notes:'',
+html:`<div class="split" style="align-items:center">
+ <div>
+  <div class="eyebrow">A bias we went looking for</div>
+  <h2>Are we more likely to decline on a weekend?</h2>
+  <p data-frag>The field has already tested the <em>mystical</em> explanations. A UNOS review of a decade of adult transplants found that full moons and Friday the 13th changed nothing: not donors, not recipients, not outcomes, not volume.</p>
+  <p class="sub" data-frag>So we tested the mundane one. It is the obvious worry. Offers arrive overnight, at Christmas, on a long weekend, when the retrieval team is thinnest and the person on call is alone.</p>
+  <p class="sub" data-frag>We tested it across <strong>1,216 offers</strong> with a decision and a date. Weekday acceptance <strong>22.3%</strong>. Weekend <strong>24.7%</strong>. Statutory holidays <strong>27.6%</strong>.</p>
+  <p class="sub" data-frag>No difference in any direction that the numbers can support. <em>The bias we expected to find is not there.</em></p>
+  <p class="mono sub" data-frag>Weekend vs weekday p = 0.39. Weekend or holiday vs weekday p = 0.25. DCD offers alone, 40.9% vs 37.3%, p = 0.65.</p>
+  <p class="refline" data-frag>Goodnight Moon: the (not so) mystical effect of folklore and superstitions on cardiac transplantation. <em>J Heart Lung Transplant</em>, 2024. UNOS adult transplants 2013&ndash;2023. Confirm authors, volume and pages before presenting.</p>
+ </div>
+ <div class="stagew"><svg viewBox="0 0 470 320" aria-label="Donor offer acceptance by day of week">
+  <line x1="52" y1="240" x2="452" y2="240" stroke="var(--dim)" stroke-width="1" opacity=".3"/>
+  <line x1="52" y1="40" x2="52" y2="240" stroke="var(--dim)" stroke-width="1" opacity=".3"/>
+  <text x="44" y="46" text-anchor="end" style="font-size:12px">40%</text>
+  <text x="44" y="244" text-anchor="end" style="font-size:12px">0</text>
+  <line x1="52" y1="128" x2="452" y2="128" stroke="var(--dim)" stroke-width="1" stroke-dasharray="5 5" opacity=".45"/>
+  <text x="456" y="132" class="lab" style="font-size:11.5px;fill:var(--dim)">22.8% overall</text>
+  ${[['Mon',19.5,169],['Tue',22.9,210],['Wed',20.0,175],['Thu',27.0,159],['Fri',22.1,199],['Sat',22.8,167],['Sun',27.0,137]]
+    .map((d,i)=>{const x=74+i*54, h=200*d[1]/40, wknd=i>=5;
+    return `<rect x="${x-17}" y="${240-h}" width="34" height="${h}" rx="1" fill="${wknd?'var(--gold)':'var(--slate)'}" opacity=".9" class="growup" style="--del:${.3+i*.12}s"/>
+    <text x="${x}" y="${232-h}" text-anchor="middle" style="font-size:12px;font-weight:600;fill:${wknd?'var(--gold)':'var(--slate)'};opacity:0;animation:rise .5s ease ${.9+i*.12}s both">${d[1]}</text>
+    <text x="${x}" y="260" text-anchor="middle" style="font-size:11.5px">${d[0]}</text>`;}).join('')}
+  <text x="52" y="292" class="lab" style="font-size:12.5px;fill:var(--dim)">ACCEPTANCE RATE &#183; 1,216 OFFERS</text>
+  <text x="52" y="312" class="lab" style="font-size:12.5px;fill:var(--gold);opacity:0;animation:rise .7s ease 2.2s both">WEEKEND</text>
+ </svg></div>
+</div>`},
+
 {heat:0,vol:32,phase:'The trap',
 notes:'The loop runs backwards. Say it plainly: a small programme is structurally punished for taking chances, so it stops taking them, so it stays small. This is not a failure of courage. It is arithmetic.',
 html:`<div class="split">
  <div>
   <div class="eyebrow">The trap</div>
-  <h2>Small programmes are forced to be conservative</h2>
-  <p data-frag>Not from timidity. From exposure. When a single bad outcome moves your published rate by two points, the rational move is always to decline.</p>
+  <h2>Every programme has a risk budget. Ours was too small.</h2>
+  <p data-frag>Not from timidity. From exposure. When a single bad outcome moves your published rate by two points, declining is the rational move, and the budget never grows.</p>
   <p class="sub" data-frag>So you decline. So you stay small. So you remain exposed. <em>The loop runs backwards just as easily as forwards.</em></p>
  </div>
  <div class="stagew"><svg viewBox="0 0 400 400" aria-label="The conservatism doom loop">
@@ -917,28 +963,29 @@ html:`<div class="eyebrow">The pivot</div>
   <div class="dash-hd">
    <span class="dot"></span><span class="mono">transplant-dev.heartfunction.ca</span>
    <span class="mono live-tag">LIVE</span>
-   <span class="mono" style="margin-left:auto">JUL 2020 – JUN 2026</span>
+   <span class="mono" style="margin-left:auto">n = 254 &#183; ALL YEARS</span>
   </div>
 
   <div class="kpis">
-   ${[['ICU LOS','d',6.4,0],['POST-HTx LOS','d',21.8,.12],['VENT DAYS','d',2.1,.24],
-      ['TRACHEOSTOMY','%',4.0,.36],['DIALYSIS','%',11.0,.48],['SEVERE PGD','%',9.0,.6]]
+   ${[['SEVERE PGD','%',13.0,0,'33 / 254'],['VASOPLEGIA','%',45.4,.12,'108 / 238'],
+      ['ICU LOS','d',8,.24,'median, n = 79'],['POST-HTx LOS','d',17,.36,'median, n = 201'],
+      ['DIALYSIS','%',32.9,.48,'82 / 249'],['30-DAY SURVIVAL','%',91.3,.6,'22 deaths / 253']]
      .map(k=>`<div class="kpi cine" style="--del:${k[3]}s">
         <span class="kl">${k[0]}</span>
-        <span class="kv" data-count="${k[2]}" data-dec="${k[1]==='%'?0:1}" data-del="${400+k[3]*1000}">0</span><span class="ku">${k[1]}</span>
-        <span class="spark"><i style="--w:${40+Math.random()*45}%"></i></span>
+        <span class="kv" data-count="${k[2]}" data-dec="${Number.isInteger(k[2])?0:1}" data-del="${400+k[3]*1000}">0</span><span class="ku">${k[1]}</span>
+        <span class="kl" style="margin-top:.3rem;font-size:10.5px;opacity:.8">${k[4]}</span>
       </div>`).join('')}
   </div>
 
   <div class="dash-body">
    <div class="panel">
-    <span class="pt">TRANSPLANTS · JULY TO JULY</span>
+    <span class="pt">TRANSPLANTS BY CALENDAR YEAR</span>
     <svg viewBox="0 0 420 150" aria-label="Annual transplant volume">
-     ${[[37,'20/21'],[32,'21/22'],[28,'22/23'],[44,'23/24'],[37,'24/25'],[61,'25/26']].map((v,i)=>`
-       <rect x="${26+i*66}" y="${130-v[0]*1.9}" width="44" height="${v[0]*1.9}" rx="1"
-         fill="${i===5?'var(--gold)':(i===2?'var(--red)':'var(--slate)')}" opacity=".9" class="growup" style="--del:${.5+i*.13}s"/>
-       <text x="${48+i*66}" y="${124-v[0]*1.9}" text-anchor="middle" style="font-size:12px;font-weight:600;fill:var(--ink)">${v[0]}</text>
-       <text x="${48+i*66}" y="146" text-anchor="middle" style="font-size:10.5px">${v[1]}</text>`).join('')}
+     ${[[35,'2020'],[34,'2021'],[20,'2022'],[43,'2023'],[38,'2024'],[44,'2025'],[40,'2026']].map((v,i)=>`
+       <rect x="${20+i*57}" y="${130-v[0]*2.4}" width="38" height="${v[0]*2.4}" rx="1"
+         fill="${i===6?'var(--gold)':(i===2?'var(--red)':'var(--slate)')}" opacity=".9" class="growup" style="--del:${.5+i*.12}s"/>
+       <text x="${39+i*57}" y="${124-v[0]*2.4}" text-anchor="middle" style="font-size:12px;font-weight:600;fill:var(--ink)">${v[0]}</text>
+       <text x="${39+i*57}" y="146" text-anchor="middle" style="font-size:10.5px">${v[1]}</text>`).join('')}
      <line x1="10" y1="130" x2="410" y2="130" stroke="var(--dim)" stroke-width="1" opacity=".3"/>
     </svg>
    </div>
@@ -973,7 +1020,53 @@ html:`<div class="eyebrow">The pivot</div>
    </div>
   </div>
  </div>
- <p class="sub" data-frag>We did not grow first and measure later. <em>Visibility came first</em>, and it is what made the risk affordable.</p>`},
+ <div class="qrblock" data-frag>
+   <svg viewBox="0 0 33 33" class="qr" aria-label="QR code linking to the programme dashboard">
+    <rect width="33" height="33" fill="#FFFFFF"/>
+    <path d="M2,2h7v1h-7zM10,2h1v1h-1zM12,2h3v1h-3zM17,2h3v1h-3zM24,2h7v1h-7zM2,3h1v1h-1zM8,3h1v1h-1zM12,3h1v1h-1zM14,3h3v1h-3zM18,3h1v1h-1zM24,3h1v1h-1zM30,3h1v1h-1zM2,4h1v1h-1zM4,4h3v1h-3zM8,4h1v1h-1zM10,4h3v1h-3zM16,4h5v1h-5zM24,4h1v1h-1zM26,4h3v1h-3zM30,4h1v1h-1zM2,5h1v1h-1zM4,5h3v1h-3zM8,5h1v1h-1zM12,5h1v1h-1zM16,5h1v1h-1zM19,5h3v1h-3zM24,5h1v1h-1zM26,5h3v1h-3zM30,5h1v1h-1zM2,6h1v1h-1zM4,6h3v1h-3zM8,6h1v1h-1zM11,6h2v1h-2zM15,6h3v1h-3zM19,6h1v1h-1zM22,6h1v1h-1zM24,6h1v1h-1zM26,6h3v1h-3zM30,6h1v1h-1zM2,7h1v1h-1zM8,7h1v1h-1zM10,7h3v1h-3zM14,7h1v1h-1zM17,7h1v1h-1zM19,7h1v1h-1zM24,7h1v1h-1zM30,7h1v1h-1zM2,8h7v1h-7zM10,8h1v1h-1zM12,8h1v1h-1zM14,8h1v1h-1zM16,8h1v1h-1zM18,8h1v1h-1zM20,8h1v1h-1zM22,8h1v1h-1zM24,8h7v1h-7zM11,9h1v1h-1zM16,9h3v1h-3zM22,9h1v1h-1zM2,10h1v1h-1zM4,10h1v1h-1zM8,10h2v1h-2zM11,10h3v1h-3zM15,10h2v1h-2zM18,10h1v1h-1zM21,10h1v1h-1zM25,10h1v1h-1zM28,10h1v1h-1zM30,10h1v1h-1zM3,11h2v1h-2zM6,11h2v1h-2zM11,11h1v1h-1zM15,11h2v1h-2zM19,11h1v1h-1zM21,11h5v1h-5zM29,11h2v1h-2zM2,12h1v1h-1zM5,12h1v1h-1zM8,12h1v1h-1zM12,12h2v1h-2zM17,12h1v1h-1zM21,12h8v1h-8zM30,12h1v1h-1zM2,13h1v1h-1zM5,13h3v1h-3zM9,13h3v1h-3zM14,13h2v1h-2zM17,13h2v1h-2zM20,13h3v1h-3zM24,13h2v1h-2zM27,13h1v1h-1zM3,14h1v1h-1zM8,14h3v1h-3zM15,14h1v1h-1zM18,14h1v1h-1zM22,14h1v1h-1zM24,14h1v1h-1zM30,14h1v1h-1zM2,15h1v1h-1zM4,15h2v1h-2zM7,15h1v1h-1zM9,15h4v1h-4zM17,15h1v1h-1zM21,15h2v1h-2zM24,15h2v1h-2zM29,15h2v1h-2zM2,16h1v1h-1zM5,16h1v1h-1zM8,16h1v1h-1zM12,16h2v1h-2zM15,16h3v1h-3zM19,16h1v1h-1zM21,16h1v1h-1zM23,16h2v1h-2zM26,16h1v1h-1zM30,16h1v1h-1zM2,17h6v1h-6zM10,17h4v1h-4zM16,17h3v1h-3zM23,17h1v1h-1zM25,17h2v1h-2zM2,18h1v1h-1zM6,18h4v1h-4zM11,18h3v1h-3zM15,18h2v1h-2zM18,18h1v1h-1zM20,18h3v1h-3zM24,18h2v1h-2zM30,18h1v1h-1zM4,19h1v1h-1zM11,19h1v1h-1zM13,19h7v1h-7zM21,19h2v1h-2zM24,19h1v1h-1zM28,19h3v1h-3zM2,20h9v1h-9zM13,20h2v1h-2zM17,20h1v1h-1zM21,20h2v1h-2zM25,20h1v1h-1zM27,20h1v1h-1zM30,20h1v1h-1zM6,21h2v1h-2zM13,21h1v1h-1zM15,21h1v1h-1zM22,21h1v1h-1zM24,21h2v1h-2zM2,22h2v1h-2zM8,22h2v1h-2zM11,22h1v1h-1zM13,22h1v1h-1zM15,22h1v1h-1zM18,22h1v1h-1zM22,22h6v1h-6zM29,22h1v1h-1zM10,23h3v1h-3zM14,23h1v1h-1zM17,23h2v1h-2zM20,23h1v1h-1zM22,23h1v1h-1zM26,23h3v1h-3zM30,23h1v1h-1zM2,24h7v1h-7zM10,24h2v1h-2zM14,24h6v1h-6zM22,24h1v1h-1zM24,24h1v1h-1zM26,24h1v1h-1zM30,24h1v1h-1zM2,25h1v1h-1zM8,25h1v1h-1zM11,25h2v1h-2zM16,25h3v1h-3zM20,25h3v1h-3zM26,25h1v1h-1zM30,25h1v1h-1zM2,26h1v1h-1zM4,26h3v1h-3zM8,26h1v1h-1zM11,26h3v1h-3zM15,26h2v1h-2zM18,26h1v1h-1zM21,26h7v1h-7zM29,26h2v1h-2zM2,27h1v1h-1zM4,27h3v1h-3zM8,27h1v1h-1zM11,27h1v1h-1zM13,27h1v1h-1zM16,27h2v1h-2zM19,27h1v1h-1zM23,27h1v1h-1zM26,27h3v1h-3zM30,27h1v1h-1zM2,28h1v1h-1zM4,28h3v1h-3zM8,28h1v1h-1zM10,28h2v1h-2zM13,28h2v1h-2zM16,28h7v1h-7zM26,28h1v1h-1zM29,28h2v1h-2zM2,29h1v1h-1zM8,29h1v1h-1zM11,29h2v1h-2zM15,29h4v1h-4zM21,29h2v1h-2zM27,29h1v1h-1zM2,30h7v1h-7zM10,30h1v1h-1zM13,30h2v1h-2zM16,30h1v1h-1zM18,30h1v1h-1zM22,30h1v1h-1zM25,30h1v1h-1zM27,30h1v1h-1zM30,30h1v1h-1z" fill="#0E1C1E"/>
+   </svg>
+   <div>
+    <div class="qr-t">hf-transplant.prod.uhn.io</div>
+    <div class="qr-s">Live programme dashboard.<br>Requires the UHN network or VPN.</div>
+   </div>
+  </div>
+  <p class="sub" data-frag>We did not grow first and measure later. <em>Visibility came first</em>, and it is what made the risk affordable.</p>`},
+
+{heat:2,vol:61,phase:'Year to date',
+notes:'',
+html:`<div class="eyebrow">Where we are right now</div>
+ <h2>2026, year to date</h2>
+ <div class="dash" style="margin-top:.8rem">
+  <div class="dash-hd"><span class="dot"></span><span class="mono">CURRENT YTD &#183; DBD + DCD</span>
+   <span class="mono live-tag">LIVE</span>
+   <span class="mono" style="margin-left:auto">SOURCE 27 JULY 2026</span></div>
+  <div class="kpis">
+   ${[['TRANSPLANTS','',40,0,'32 DBD &#183; 8 DCD'],
+      ['DCD SHARE','%',20.0,.1,'8 / 40'],
+      ['ON MACHINE PERFUSION','%',100,.2,'8 / 8 DCD'],
+      ['SEVERE PGD','%',12.5,.3,'5 / 40'],
+      ['30-DAY MORTALITY','%',10.3,.4,'4 deaths / 40'],
+      ['DIALYSIS RECOVERY','%',94.7,.5,'18 / 19 off dialysis']]
+     .map(k=>`<div class="kpi cine" style="--del:${k[3]}s">
+        <span class="kl">${k[0]}</span>
+        <span class="kv" data-count="${k[2]}" data-dec="${Number.isInteger(k[2])?0:1}" data-del="${400+k[3]*1000}">0</span><span class="ku">${k[1]}</span>
+        <span class="kl" style="margin-top:.3rem;font-size:10.5px;opacity:.8">${k[4]}</span>
+      </div>`).join('')}
+  </div>
+  <div class="kpis" style="margin-top:.5rem">
+   ${[['VASOPLEGIA','%',47.4,.6,'18 / 38'],
+      ['ICU LOS','d',7,.7,'median &#183; n = 35'],
+      ['POST-HTx LOS','d',18,.8,'median &#183; n = 29'],
+      ['DIALYSIS','%',47.5,.9,'19 / 40'],
+      ['TRACHEOSTOMY','%',12.5,1.1,'5 / 40']]
+     .map(k=>`<div class="kpi cine" style="--del:${k[3]}s">
+        <span class="kl">${k[0]}</span>
+        <span class="kv" data-count="${k[2]}" data-dec="${Number.isInteger(k[2])?0:1}" data-del="${400+k[3]*1000}">0</span><span class="ku">${k[1]}</span>
+        <span class="kl" style="margin-top:.3rem;font-size:10.5px;opacity:.8">${k[4]}</span>
+      </div>`).join('')}
+  </div>
+ </div>
+ <p class="sub" data-frag>Forty transplants by the end of July, <strong>one in five from a DCD donor</strong>, every one of them on machine perfusion. Dialysis is high at 47.5%, and <strong>nineteen of twenty recovered kidney function</strong>.</p>`},
 
 {heat:3,vol:61,phase:'Autocorrection',
 notes:'Watch the sequence: the PGD tile trips red, the alert fires, the team changes practice, and the curve bends back. This loop — measure, flag, respond, re-measure — is what let us grow without trading away outcomes. Say plainly that we found this because we were looking, not because someone complained.',
@@ -1062,25 +1155,30 @@ notes:'',
 html:`<div class="split" style="align-items:center">
  <div>
   <div class="eyebrow">Our own numbers</div>
-  <h2>We doubled the volume. Severe PGD did not follow.</h2>
-  <p data-frag>Severe primary graft dysfunction, defined as requiring <strong>ECMO or mechanical support after transplant</strong>, runs at <strong>13.8%</strong> across the programme. Thirty-six recipients of the 260 with the field recorded.</p>
-  <p class="sub" data-frag>It was <strong>20%</strong> in 2020. Every year since it has sat between 10% and 14%, while annual volume more than doubled.</p>
-  <p class="sub" data-frag>We took more marginal donors, longer distances, sicker recipients. <em>The rate held.</em> That is what a risk budget looks like when it is spent well.</p>
-  <p class="mono sub" data-frag>Post-transplant ECMO, BiVAD, VV ECMO or other mechanical support. 12.2% if all 296 transplants are used as the denominator.</p>
+  <h2>Severe PGD sits at 13%, and the risk is not evenly spread</h2>
+  <p data-frag>Across all 254 transplants: <strong>33 cases, 13.0%</strong>. Year to date it is <strong>12.5%</strong>, five of forty.</p>
+  <p class="sub" data-frag>Split by donor type this year, it is <strong>9.4% after DBD</strong> and <strong>25% after DCD</strong>. That is the price of the pool we opened, stated plainly.</p>
+  <p class="sub" data-frag>DCD was <strong>3.9%</strong> of our transplants across all years. This year it is <strong>20%</strong>. <em>We knew what we were buying.</em></p>
+  <p class="mono sub" data-frag>Severe PGD defined as post-transplant mechanical support. Programme dashboard, source 27 July 2026.</p>
  </div>
- <div class="stagew"><svg viewBox="0 0 480 320" aria-label="Severe PGD rate and annual volume by year">
-  <line x1="46" y1="250" x2="470" y2="250" stroke="var(--dim)" stroke-width="1" opacity=".3"/>
-  <line x1="46" y1="40" x2="46" y2="250" stroke="var(--dim)" stroke-width="1" opacity=".3"/>
-  <text x="38" y="46" text-anchor="end" style="font-size:12px">25%</text>
-  <text x="38" y="254" text-anchor="end" style="font-size:12px">0</text>
-  ${[[2019,10.0,10],[2020,20.0,35],[2021,14.7,34],[2022,10.0,20],[2023,10.9,46],[2024,13.2,38],[2025,13.6,44],[2026,12.2,41]]
-    .map((d,i)=>{const x=68+i*52, h=(250-40)*d[1]/25, vh=(250-40)*(d[2]/70);
-    return `<rect x="${x-16}" y="${250-vh}" width="32" height="${vh}" fill="var(--slate)" opacity=".14" class="growup" style="--del:${.3+i*.1}s"/>
-    <rect x="${x-9}" y="${250-h}" width="18" height="${h}" rx="1" fill="${d[1]>=15?'var(--red)':'var(--cyan)'}" opacity=".95" class="growup" style="--del:${.6+i*.11}s"/>
-    <text x="${x}" y="${242-h}" text-anchor="middle" style="font-size:12px;font-weight:600;fill:${d[1]>=15?'var(--red)':'var(--cyan)'};opacity:0;animation:rise .5s ease ${1.1+i*.11}s both">${d[1]}</text>
-    <text x="${x}" y="270" text-anchor="middle" style="font-size:11.5px">${String(d[0]).slice(2)}</text>`;}).join('')}
-  <text x="46" y="298" class="lab" style="font-size:12px;fill:var(--cyan)">SEVERE PGD, %</text>
-  <text x="290" y="298" class="lab" style="font-size:12px;fill:var(--slate)">ANNUAL VOLUME</text>
+ <div class="stagew"><svg viewBox="0 0 470 330" aria-label="Severe PGD by donor type and DCD growth">
+  <text x="0" y="18" class="lab" style="font-size:13px">SEVERE PGD BY DONOR TYPE &#183; 2026</text>
+  <text x="0" y="62" class="lab" style="font-size:14px;fill:var(--ink)">DBD</text>
+  <rect x="86" y="46" width="94" height="24" fill="var(--cyan)" class="growx" style="--del:.4s"/>
+  <text x="190" y="64" class="lab" style="font-size:14px;fill:var(--cyan);opacity:0;animation:rise .6s ease 1.2s both">9.4%</text>
+  <text x="0" y="108" class="lab" style="font-size:14px;fill:var(--ink)">DCD</text>
+  <rect x="86" y="92" width="250" height="24" fill="var(--red)" class="growx" style="--del:1s"/>
+  <text x="346" y="110" class="lab" style="font-size:14px;fill:var(--red);opacity:0;animation:rise .6s ease 1.8s both">25%</text>
+
+  <line x1="0" y1="146" x2="450" y2="146" stroke="var(--dim)" stroke-width="1" opacity=".22"/>
+  <text x="0" y="178" class="lab" style="font-size:13px">DCD SHARE OF OUR TRANSPLANTS</text>
+  <text x="0" y="222" class="lab" style="font-size:14px;fill:var(--ink)">All years</text>
+  <rect x="120" y="206" width="16" height="24" fill="var(--slate)" class="growx" style="--del:2.2s"/>
+  <text x="146" y="224" class="lab" style="font-size:14px;fill:var(--slate);opacity:0;animation:rise .6s ease 2.9s both">3.9%  &#183;  10 / 254</text>
+  <text x="0" y="268" class="lab" style="font-size:14px;fill:var(--ink)">2026</text>
+  <rect x="120" y="252" width="82" height="24" fill="var(--gold)" class="growx" style="--del:2.6s"/>
+  <text x="212" y="270" class="lab" style="font-size:14px;fill:var(--gold);opacity:0;animation:rise .6s ease 3.3s both">20%  &#183;  8 / 40</text>
+  <text x="0" y="312" class="lab" style="font-size:12.5px;fill:var(--gold);opacity:0;animation:rise .7s ease 3.6s both">ALL EIGHT ON MACHINE PERFUSION</text>
  </svg></div>
 </div>`},
 
@@ -1166,7 +1264,7 @@ notes:'Each criterion is struck through as you argue it was a proxy, not a reaso
 html:`<div class="eyebrow">Lever 02 · The donor</div>
  <h2>Every criterion we relaxed was a bet</h2>
  <p data-frag>Every one of these is a heart on the shelf we chose not to light.</p>
- <div class="stagew" style="max-width:900px;margin-top:.8rem"><svg viewBox="0 0 900 300" aria-label="Relaxed donor criteria">
+ <div class="stagew" style="max-width:900px;margin-top:.8rem"><svg viewBox="0 0 980 320" aria-label="Relaxed donor criteria">
   ${[['Coronary disease on angiogram','ACCEPTED',''],
      ['Predicted heart mass mismatch','ACCEPTED',''],
      ['Longer retrieval distances','ACCEPTED','controlled hypothermic transport'],
@@ -1176,21 +1274,19 @@ html:`<div class="eyebrow">Lever 02 · The donor</div>
    return `
    <text x="0" y="${y}" style="font-family:'Bricolage Grotesque';font-size:24px;font-weight:700;fill:var(--ink)">${t[0]}</text>
    ${t[2]?`<text x="0" y="${y+19}" class="mono" style="font-size:13px;fill:var(--gold);opacity:0;animation:rise .6s ease ${1.5+i*.6}s both">&#8627; ${t[2]}</text>`:''}
-   <line x1="-6" y1="${y-8}" x2="600" y2="${y-8}" stroke="var(--red)" stroke-width="2.5"
+   <line x1="-6" y1="${y-8}" x2="520" y2="${y-8}" stroke="var(--red)" stroke-width="2.5"
      class="draw" style="--len:620;--dur:.55s;--del:${.8+i*.6}s"/>
-   <text x="660" y="${y}" class="lab" style="font-size:14px;fill:var(--gold);opacity:0;animation:rise .6s ease ${1.25+i*.6}s both">${t[1]}</text>`;}).join('')}
+   <text x="556" y="${y}" class="lab" style="font-size:14px;fill:var(--gold);opacity:0;animation:rise .6s ease ${1.25+i*.6}s both">${t[1]}</text>`;}).join('')}
 
-  <g style="opacity:0;animation:rise .9s ease 2.6s both" transform="translate(646,148)">
-   <rect x="0" y="16" width="128" height="76" rx="7" fill="var(--lift)" stroke="var(--accent)" stroke-width="2"/>
-   <rect x="6" y="4" width="116" height="20" rx="6" fill="none" stroke="var(--accent)" stroke-width="2"/>
-   <rect x="22" y="30" width="84" height="34" rx="3" fill="none" stroke="var(--accent)" stroke-width="1.4" opacity=".7"/>
-   <circle cx="26" cy="98" r="9" fill="none" stroke="var(--accent)" stroke-width="2"/>
-   <circle cx="102" cy="98" r="9" fill="none" stroke="var(--accent)" stroke-width="2"/>
-   <text x="64" y="52" text-anchor="middle" class="mono" style="font-size:12px;fill:var(--accent)">4 &#176;C</text>
-   <text x="64" y="126" text-anchor="middle" class="mono" style="font-size:12px;fill:var(--dim)">TRAFEROX XO PORT</text>
-  </g>
+  <foreignObject x="716" y="108" width="264" height="200">
+   <div xmlns="http://www.w3.org/1999/xhtml" class="devbox">
+    <img src="data:image/jpeg;base64,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" alt="Controlled hypothermic transport device"/>
+    <div class="dev-t">10 &#176;C</div>
+    <div class="dev-s">controlled hypothermic transport</div>
+   </div>
+  </foreignObject>
  </svg></div>
- <p class="sub" data-frag>Distance stopped being the limit once the box could hold a temperature. <strong>Controlled hypothermic transport</strong> is what made a longer retrieval a decision rather than a gamble.</p>
+ <p class="sub" data-frag>Distance stopped being the limit once the box could hold 10&nbsp;&#176;C. <strong>Controlled hypothermic transport</strong> is what made a longer retrieval a decision rather than a gamble.</p>
   <p class="sub" data-frag>None of these were reckless. All of them were <em>affordable</em>, which is a different word, and the honest one.</p>`},
 
 {heat:2,vol:61,phase:'Lever 02',
@@ -1335,16 +1431,16 @@ html:`<div class="split">
    <li data-frag><strong>Severe PGD under 5%.</strong> The target, stated plainly, and reported against.</li>
    <li data-frag><strong>Risk assessed before the cross-clamp</strong>, with predictive models feeding a prevention protocol rather than a post-hoc explanation.</li>
    <li data-frag><strong>Standardized preservation, OR, and perioperative practice.</strong> Fewer ways to do it; better ways to do it.</li>
-   <li data-frag><strong>Gradual rewarming</strong> at reperfusion rather than an abrupt return to temperature.</li>
+   <li data-frag><strong>Gradual rewarming</strong> at reperfusion rather than an abrupt return to temperature, and <strong>defined perfusion targets on pump</strong>: a stated mean arterial pressure, flow index and haematocrit, with a lactate the team is expected to act on rather than observe.</li>
    <li data-frag><strong>Selective angiotensin II</strong> for vasoplegia, used by protocol rather than as rescue.</li>
    <li data-frag><strong>PROTECT-PGD enrolling</strong> across Canadian sites.</li>
   </ul>
  </div>
- <div class="stagew"><svg viewBox="0 0 400 300" aria-label="Severe PGD target under five percent">
+ <div class="stagew"><svg viewBox="0 0 400 340" aria-label="Severe PGD target under five percent">
   ${Array.from({length:100},(_,i)=>{const hit=i<5;
    return `<circle cx="${24+(i%10)*38}" cy="${30+Math.floor(i/10)*28}" r="${hit?9:6}"
      fill="${hit?'var(--red)':'var(--gold)'}" opacity="${hit?1:.22}" class="pop" style="--del:${.3+i*.012}s"/>`;}).join('')}
-  <text x="200" y="296" text-anchor="middle" class="lab" fill="var(--red)"
+  <text x="200" y="328" text-anchor="middle" class="lab" fill="var(--red)"
     style="opacity:0;animation:rise .8s ease 1.9s both">FEWER THAN 5 IN 100</text>
  </svg></div>
 </div>`},
@@ -1357,7 +1453,7 @@ html:`<div class="eyebrow">The vision &#183; randomized and multicentre</div>
   <div class="card" data-frag><span class="n">PROTECT-PGD</span><h3>Controlled hypothermic preservation</h3>
    <p>Against cold static storage. Pan-Canadian pilot randomized trial. Does controlling the temperature of transport reduce primary graft dysfunction? Preservation technology was adopted on registry data; randomized evidence is still owed.</p></div>
   <div class="card" data-frag><span class="n">dd-cfDNA</span><h3>Surveillance without a needle</h3>
-   <p>When the graft is injured it sheds donor DNA into the recipient&rsquo;s circulation. Measured as a fraction of total cell-free DNA, it rises before the echo changes. Pan-Canadian multicentre study, funded through the CIHR Accelerating Clinical Trials platform.</p></div>
+   <p>When the graft is injured it sheds donor DNA into the recipient&rsquo;s circulation. Measured as a fraction of total cell-free DNA, it rises before the echo changes.</p></div>
  </div>
  <div class="split" style="align-items:center;margin-top:1.1rem;gap:clamp(16px,3vw,48px)">
   <div class="stagew"><svg viewBox="0 0 460 190" aria-label="Randomization schema">
@@ -1381,7 +1477,8 @@ html:`<div class="eyebrow">The vision &#183; randomized and multicentre</div>
    <path d="M10,168 C90,166 140,158 190,146 C240,132 290,116 350,110" fill="none" stroke="var(--red)" stroke-width="2.4" class="draw" style="--len:360;--dur:2.2s;--del:1.4s"/>
    <text x="360" y="168" class="lab" style="font-size:12px;fill:var(--red)">dd-cfDNA</text>
   </svg></div>
- </div>`},
+ </div>
+ <p class="refline" data-frag><strong>Funding.</strong> CIHR Accelerating Clinical Trials platform. In-kind support from CareDx and Traferox. Neither company has a role in study design, analysis or the decision to publish.</p>`},
 
 {heat:3,vol:61,phase:'2028',
 notes:'',
@@ -1514,7 +1611,7 @@ html:`<div class="split" style="align-items:center">
     </div>
     <div class="panel">
      <span class="pt">HAVE READY</span>
-     ${['Controlled hypothermic transport','Donor management: T3, vasopressin, steroid','Gradual rewarming, inhaled nitric oxide','Angiotensin II if vasoplegic']
+     ${['Controlled hypothermic transport','Donor management: T3, vasopressin, steroid','Perfusion targets on pump: MAP, flow, haematocrit','Gradual rewarming, inhaled nitric oxide','Angiotensin II if vasoplegic']
       .map((m,i)=>`<div style="font-size:13.5px;line-height:1.4;padding-left:.85rem;position:relative;margin-bottom:.42rem;opacity:0;animation:rise .5s ease ${1.6+i*.22}s both">
         <span style="position:absolute;left:0;top:.55em;width:7px;height:1px;background:var(--gold)"></span>${m}</div>`).join('')}
     </div>
@@ -1586,13 +1683,13 @@ notes:'',
 html:`<div class="eyebrow">Conclusions</div>
  <h2>Five things</h2>
  <ul style="max-width:62ch">
-  <li data-frag><strong>A small programme is not a careful one. It is an exposed one.</strong></li>
+  <li data-frag><strong>Volume is not vanity. It is the size of the risk you can afford to take.</strong></li>
   <li data-frag><strong>28 to 61 transplants a year</strong>, and one in seven still leaves the list without one.</li>
   <li data-frag><strong>The gaps are at the front door, not the operating room.</strong></li>
-  <li data-frag><strong>Volume bought a risk budget, and we spent it.</strong></li>
+  <li data-frag><strong>Growth bought us a risk budget, and we spent it deliberately.</strong></li>
   <li data-frag><strong>Nothing here is free.</strong> Fifteen years comes with vasculopathy, cancer, kidney disease.</li>
  </ul>
- <p class="lede sub" data-frag>The failure is not in the biology. <em>The failure is in our imagination.</em></p>`}
+ <p class="lede sub" data-frag>Growth was never the goal. <em>It was the permission.</em></p>`}
 ];
 
 /* ================= ENGINE ================= */
