@@ -490,7 +490,7 @@ html:`<div class="eyebrow">Where we are going</div>
   ${[['01','The status quo',
       'How many patients are waiting &middot; how many we transplant &middot; how we assess the donors we are offered'],
      ['02','What we are changing',
-      'Why a small programme cannot take chances, and the four things we did about it'],
+      'Why a small program cannot take chances, and four areas of improvement'],
      ['03','The vision',
       'What the numbers make possible &middot; 2027, 2028, 2029']]
    .map((r,i)=>`
@@ -631,7 +631,7 @@ html:`<div class="split">
   <h2>The loss happens before they reach us</h2>
   <p data-frag>Women are 37% of the patients who come for exercise testing, and 38% of the patients we transplant.</p>
   <p class="sub" data-frag>Once a woman reaches this building she is <strong>not</strong> less likely to be transplanted. The under-representation is entirely <em>upstream</em>: at recognition, at referral, at the point where someone decides this patient needs advanced assessment.</p>
-  <p class="sub" data-frag>That is not a selection problem in our programme. It is a <strong>front door problem</strong> in the system that feeds us.</p>
+  <p class="sub" data-frag>That is not a selection problem in our program. It is a <strong>front door problem</strong> in the system that feeds us.</p>
  </div>
  <div class="stagew"><svg viewBox="0 0 460 300" aria-label="Female share at exercise testing and at transplant">
   <text x="0" y="30" class="lab">CPET POPULATION</text>
@@ -689,7 +689,7 @@ html:`<div class="split" style="align-items:start">
   <div class="eyebrow">Who we are allowed to list</div>
   <h2>The criteria decide who is even eligible to wait</h2>
   <p data-frag>Listing is governed by consensus criteria, not by us alone. The 2024 ISHLT guideline sets out what we assess in every candidate.</p>
-  <p class="sub" data-frag>Most of these are not yes or no. They are <em>thresholds a programme chooses where to draw</em>, and a small programme draws them conservatively.</p>
+  <p class="sub" data-frag>Most of these are not yes or no. They are <em>thresholds a program chooses where to draw</em>, and a small program draws them conservatively.</p>
   <p class="mono sub" data-frag>ISHLT Guidelines for the Care of Heart Transplant Candidates, 2024. Verify each threshold against the published document before presenting.</p>
  </div>
  <div class="stagew"><svg viewBox="0 0 470 340" aria-label="Domains assessed in listing candidates">
@@ -706,13 +706,13 @@ html:`<div class="split" style="align-items:start">
 </div>`},
 
 {heat:0,vol:28,phase:'Why it matters',
-notes:'Open on the patient, not the programme. These are people who die of a disease we know how to treat. Every conservative decision has a cost that lands on someone who is not in the room.',
+notes:'Open on the patient, not the program. These are people who die of a disease we know how to treat. Every conservative decision has a cost that lands on someone who is not in the room.',
 html:`<div class="split">
  <div>
   <div class="eyebrow">Why this matters</div>
-  <h2>Our patients do not die of an untreatable disease</h2>
-  <p data-frag>They die of a treatable one, waiting for an organ that existed, in a country that had it, while we decided we could not take the chance.</p>
-  <p class="sub" data-frag>Every decline is a clinical judgement. It is also a <em>transfer of risk</em>: off the programme, onto a patient who will never know it happened.</p>
+  <h2>Our patients are not dying of an untreatable disease</h2>
+  <p data-frag>They are dying of a treatable one. Some of them die waiting for an organ that existed, in a country that had it.</p>
+  <p class="sub" data-frag>Every decline is a clinical judgement, and most are right. But a decline also <em>moves risk</em>: off the program, onto a patient who will never know the decision was made.</p>
   <div class="statline" data-frag>
    <span class="st-n" data-count="19.9" data-dec="1" data-del="300">0</span>
    <span class="st-u">per 100 patient-years</span>
@@ -738,6 +738,7 @@ html:`<div class="split" style="align-items:center">
   <h2>A median of fifteen years</h2>
   <p data-frag>Roughly <strong>90%</strong> alive at one year. <strong>80%</strong> at five. About <strong>two thirds</strong> at ten, and <strong>half</strong> at fifteen.</p>
   <p class="sub" data-frag>For someone dying of heart failure that is an extraordinary offer. It is also, plainly, <em>not a cure</em>. We exchange one fatal disease for a chronic one that has to be managed for the rest of a life.</p>
+  <p class="sub" data-frag>The comparison is not against health. It is against <strong>advanced heart failure at the point of referral</strong>, where survival without transplant is measured in months.</p>
   <p class="mono sub" data-frag>ISHLT Thoracic Organ Transplant Registry, most recent report. Amy Silverstein, New York Times, 18 April 2023.</p>
  </div>
  <div class="stagew"><svg viewBox="0 0 470 310" aria-label="Survival after adult heart transplantation">
@@ -798,7 +799,9 @@ html:`<div class="split" style="align-items:center">
   <h2>We look at four hearts for every one we take</h2>
   <p data-frag>Across our donor quality dataset there were <strong>1,256 offers</strong>. We accepted <strong>278</strong>.</p>
   <p class="sub" data-frag>That is <strong>22.9%</strong>. Put another way, <em>4.4 offers for every heart transplanted</em>. Median donor age 41.</p>
-  <p class="sub" data-frag>Nine hundred and thirty-eight times we said no. Each of those was a judgement made at speed, usually overnight, usually by one person.</p>
+  <p class="sub" data-frag><strong>Nine hundred and thirty-eight times we said no.</strong></p>
+  <p class="sub" data-frag>Almost always at speed, almost always overnight, and almost always by <strong>one physician deciding alone</strong>, with incomplete information and no way to check the instinct against anyone else&rsquo;s.</p>
+  <p class="sub" data-frag>Uncertainty and solitude both push the same way. <em>They push toward no.</em></p>
  </div>
  <div class="stagew"><svg viewBox="0 0 470 330" aria-label="Donor offers accepted and declined">
   ${Array.from({length:100},(_,i)=>{const acc=i<23;
@@ -814,7 +817,7 @@ notes:'',
 html:`<div class="split" style="align-items:start">
  <div>
   <div class="eyebrow">How an offer actually arrives</div>
-  <h2>This is the decision, as we receive it</h2>
+  <h2>This is the information we decide on</h2>
   <p data-frag>An email, late in the evening. Attachments. Angiogram images on a <strong>compact disc</strong> that must be physically couriered if we want to see them.</p>
   <p class="sub" data-frag>From this, overnight, one person decides whether eight candidates live or keep waiting.</p>
   <p class="sub" data-frag><strong style="color:var(--red);font-size:1.18em">This is the state of the art.</strong></p>
@@ -869,11 +872,11 @@ html:`<div class="split" style="align-items:center">
 </div>`},
 
 {heat:0,vol:32,phase:'The trap',
-notes:'The loop runs backwards. Say it plainly: a small programme is structurally punished for taking chances, so it stops taking them, so it stays small. This is not a failure of courage. It is arithmetic.',
+notes:'The loop runs backwards. Say it plainly: a small program is structurally punished for taking chances, so it stops taking them, so it stays small. This is not a failure of courage. It is arithmetic.',
 html:`<div class="split">
  <div>
   <div class="eyebrow">The trap</div>
-  <h2>Every programme has a risk budget. Ours was too small.</h2>
+  <h2>Every program has a risk budget. Ours was too small.</h2>
   <p data-frag>Not from timidity. From exposure. When a single bad outcome moves your published rate by two points, declining is the rational move, and the budget never grows.</p>
   <p class="sub" data-frag>So you decline. So you stay small. So you remain exposed. <em>The loop runs backwards just as easily as forwards.</em></p>
  </div>
@@ -894,7 +897,7 @@ notes:'',
 html:`<div class="sectdiv">
  <div class="sd-n">02</div>
  <h2 class="cine">What we are changing</h2>
- <p class="sd-sub" data-frag>Why a small programme cannot take chances, and the four things we did about it</p>
+ <p class="sd-sub" data-frag>Why a small program cannot take chances, and four areas of improvement</p>
  <div class="sd-bar"></div>
 </div>`},
 
@@ -956,9 +959,9 @@ html:`<div class="split" style="align-items:center">
 </div>`},
 
 {heat:3,vol:61,phase:'The dashboard',
-notes:'This is the real dashboard, running. Let it populate before you talk — the tiles count up, the survival curve draws, offers scroll in. The point: before this existed, nobody in the programme could answer "how are we doing?" without a chart review.',
+notes:'This is the real dashboard, running. Let it populate before you talk — the tiles count up, the survival curve draws, offers scroll in. The point: before this existed, nobody in the program could answer "how are we doing?" without a chart review.',
 html:`<div class="eyebrow">The pivot</div>
- <h2>A risk budget you can actually see</h2>
+ <h2>A program you can actually see</h2>
  <div class="dash">
   <div class="dash-hd">
    <span class="dot"></span><span class="mono">transplant-dev.heartfunction.ca</span>
@@ -1021,16 +1024,16 @@ html:`<div class="eyebrow">The pivot</div>
   </div>
  </div>
  <div class="qrblock" data-frag>
-   <svg viewBox="0 0 33 33" class="qr" aria-label="QR code linking to the programme dashboard">
+   <svg viewBox="0 0 33 33" class="qr" aria-label="QR code linking to the program dashboard">
     <rect width="33" height="33" fill="#FFFFFF"/>
     <path d="M2,2h7v1h-7zM10,2h1v1h-1zM12,2h3v1h-3zM17,2h3v1h-3zM24,2h7v1h-7zM2,3h1v1h-1zM8,3h1v1h-1zM12,3h1v1h-1zM14,3h3v1h-3zM18,3h1v1h-1zM24,3h1v1h-1zM30,3h1v1h-1zM2,4h1v1h-1zM4,4h3v1h-3zM8,4h1v1h-1zM10,4h3v1h-3zM16,4h5v1h-5zM24,4h1v1h-1zM26,4h3v1h-3zM30,4h1v1h-1zM2,5h1v1h-1zM4,5h3v1h-3zM8,5h1v1h-1zM12,5h1v1h-1zM16,5h1v1h-1zM19,5h3v1h-3zM24,5h1v1h-1zM26,5h3v1h-3zM30,5h1v1h-1zM2,6h1v1h-1zM4,6h3v1h-3zM8,6h1v1h-1zM11,6h2v1h-2zM15,6h3v1h-3zM19,6h1v1h-1zM22,6h1v1h-1zM24,6h1v1h-1zM26,6h3v1h-3zM30,6h1v1h-1zM2,7h1v1h-1zM8,7h1v1h-1zM10,7h3v1h-3zM14,7h1v1h-1zM17,7h1v1h-1zM19,7h1v1h-1zM24,7h1v1h-1zM30,7h1v1h-1zM2,8h7v1h-7zM10,8h1v1h-1zM12,8h1v1h-1zM14,8h1v1h-1zM16,8h1v1h-1zM18,8h1v1h-1zM20,8h1v1h-1zM22,8h1v1h-1zM24,8h7v1h-7zM11,9h1v1h-1zM16,9h3v1h-3zM22,9h1v1h-1zM2,10h1v1h-1zM4,10h1v1h-1zM8,10h2v1h-2zM11,10h3v1h-3zM15,10h2v1h-2zM18,10h1v1h-1zM21,10h1v1h-1zM25,10h1v1h-1zM28,10h1v1h-1zM30,10h1v1h-1zM3,11h2v1h-2zM6,11h2v1h-2zM11,11h1v1h-1zM15,11h2v1h-2zM19,11h1v1h-1zM21,11h5v1h-5zM29,11h2v1h-2zM2,12h1v1h-1zM5,12h1v1h-1zM8,12h1v1h-1zM12,12h2v1h-2zM17,12h1v1h-1zM21,12h8v1h-8zM30,12h1v1h-1zM2,13h1v1h-1zM5,13h3v1h-3zM9,13h3v1h-3zM14,13h2v1h-2zM17,13h2v1h-2zM20,13h3v1h-3zM24,13h2v1h-2zM27,13h1v1h-1zM3,14h1v1h-1zM8,14h3v1h-3zM15,14h1v1h-1zM18,14h1v1h-1zM22,14h1v1h-1zM24,14h1v1h-1zM30,14h1v1h-1zM2,15h1v1h-1zM4,15h2v1h-2zM7,15h1v1h-1zM9,15h4v1h-4zM17,15h1v1h-1zM21,15h2v1h-2zM24,15h2v1h-2zM29,15h2v1h-2zM2,16h1v1h-1zM5,16h1v1h-1zM8,16h1v1h-1zM12,16h2v1h-2zM15,16h3v1h-3zM19,16h1v1h-1zM21,16h1v1h-1zM23,16h2v1h-2zM26,16h1v1h-1zM30,16h1v1h-1zM2,17h6v1h-6zM10,17h4v1h-4zM16,17h3v1h-3zM23,17h1v1h-1zM25,17h2v1h-2zM2,18h1v1h-1zM6,18h4v1h-4zM11,18h3v1h-3zM15,18h2v1h-2zM18,18h1v1h-1zM20,18h3v1h-3zM24,18h2v1h-2zM30,18h1v1h-1zM4,19h1v1h-1zM11,19h1v1h-1zM13,19h7v1h-7zM21,19h2v1h-2zM24,19h1v1h-1zM28,19h3v1h-3zM2,20h9v1h-9zM13,20h2v1h-2zM17,20h1v1h-1zM21,20h2v1h-2zM25,20h1v1h-1zM27,20h1v1h-1zM30,20h1v1h-1zM6,21h2v1h-2zM13,21h1v1h-1zM15,21h1v1h-1zM22,21h1v1h-1zM24,21h2v1h-2zM2,22h2v1h-2zM8,22h2v1h-2zM11,22h1v1h-1zM13,22h1v1h-1zM15,22h1v1h-1zM18,22h1v1h-1zM22,22h6v1h-6zM29,22h1v1h-1zM10,23h3v1h-3zM14,23h1v1h-1zM17,23h2v1h-2zM20,23h1v1h-1zM22,23h1v1h-1zM26,23h3v1h-3zM30,23h1v1h-1zM2,24h7v1h-7zM10,24h2v1h-2zM14,24h6v1h-6zM22,24h1v1h-1zM24,24h1v1h-1zM26,24h1v1h-1zM30,24h1v1h-1zM2,25h1v1h-1zM8,25h1v1h-1zM11,25h2v1h-2zM16,25h3v1h-3zM20,25h3v1h-3zM26,25h1v1h-1zM30,25h1v1h-1zM2,26h1v1h-1zM4,26h3v1h-3zM8,26h1v1h-1zM11,26h3v1h-3zM15,26h2v1h-2zM18,26h1v1h-1zM21,26h7v1h-7zM29,26h2v1h-2zM2,27h1v1h-1zM4,27h3v1h-3zM8,27h1v1h-1zM11,27h1v1h-1zM13,27h1v1h-1zM16,27h2v1h-2zM19,27h1v1h-1zM23,27h1v1h-1zM26,27h3v1h-3zM30,27h1v1h-1zM2,28h1v1h-1zM4,28h3v1h-3zM8,28h1v1h-1zM10,28h2v1h-2zM13,28h2v1h-2zM16,28h7v1h-7zM26,28h1v1h-1zM29,28h2v1h-2zM2,29h1v1h-1zM8,29h1v1h-1zM11,29h2v1h-2zM15,29h4v1h-4zM21,29h2v1h-2zM27,29h1v1h-1zM2,30h7v1h-7zM10,30h1v1h-1zM13,30h2v1h-2zM16,30h1v1h-1zM18,30h1v1h-1zM22,30h1v1h-1zM25,30h1v1h-1zM27,30h1v1h-1zM30,30h1v1h-1z" fill="#0E1C1E"/>
    </svg>
    <div>
     <div class="qr-t">hf-transplant.prod.uhn.io</div>
-    <div class="qr-s">Live programme dashboard.<br>Requires the UHN network or VPN.</div>
+    <div class="qr-s">Live program dashboard.<br>Requires the UHN network or VPN.</div>
    </div>
   </div>
-  <p class="sub" data-frag>We did not grow first and measure later. <em>Visibility came first</em>, and it is what made the risk affordable.</p>`},
+  <p class="sub" data-frag>It does not argue with us. It <strong>informs in real time</strong>, challenges assumptions about how the program is running, creates accountability, and lets us adjust in weeks rather than at the annual review.</p>`},
 
 {heat:2,vol:61,phase:'Year to date',
 notes:'',
@@ -1073,8 +1076,8 @@ notes:'Watch the sequence: the PGD tile trips red, the alert fires, the team cha
 html:`<div class="split">
  <div>
   <div class="eyebrow">The correction loop</div>
-  <h2>A dashboard that argues back</h2>
-  <p data-frag>A reporting tool tells you what happened last year. A <em>correcting</em> tool tells you this month, while you can still act.</p>
+  <h2>A dashboard that tells us early</h2>
+  <p data-frag>A reporting tool tells you what happened last year. A <em>correcting</em> tool tells you this month, while there is still something to be done about it.</p>
   <ul class="sub">
    <li data-frag><strong>Measure continuously</strong>, not at the annual review.</li>
    <li data-frag><strong>Flag against your own baseline</strong>, not only the registry mean.</li>
@@ -1112,9 +1115,9 @@ html:`<div class="split">
 </div>`},
 
 {heat:3,vol:61,phase:'Comparison',
-notes:'We went and looked. 210 a year against our 61 — three and a half times. Say it without defensiveness. The point is not that they are better; it is that at that volume these capabilities stop being projects you fight for and become simply how the programme runs.',
+notes:'We went and looked. 210 a year against our 61 — three and a half times. Say it without defensiveness. The point is not that they are better; it is that at that volume these capabilities stop being projects you fight for and become simply how the program runs.',
 html:`<div class="eyebrow">The comparison</div>
- <h2>What a larger programme can simply do</h2>
+ <h2>What a larger program can simply do</h2>
  <div class="stagew" style="max-width:920px;margin:1rem 0"><svg viewBox="0 0 920 165" aria-label="Volume comparison">
   <text x="0" y="34" class="lab" fill="var(--slate)">US</text>
   <rect x="120" y="16" width="209" height="26" fill="var(--slate)" class="growx" style="--del:.3s"/>
@@ -1190,6 +1193,7 @@ html:`<div class="split" style="align-items:center">
   <h2>From ten patients to forty</h2>
   <p data-frag>A waiting list is not a queue we inherit. It is a <em>population we go and find</em>.</p>
   <p class="sub" data-frag>On 31 July 2026 there were <strong>37 candidates</strong> listed, 31 active and 6 on hold. Median age 58, range 24 to 73.</p>
+  <p class="sub" data-frag>Status runs from 1, the sickest and supported in hospital, out to 4, stable enough to wait at home. Nearly half our list sits at Status 1.</p>
   <p class="sub" data-frag>None of these people are newly ill. They were always there. <strong>We were not.</strong></p>
   <div class="pt-side" data-frag>
    <figure class="pt-card pt-lg"><img src="data:image/jpeg;base64,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" alt="Paige Graham"></figure>
@@ -1206,7 +1210,7 @@ html:`<div class="split" style="align-items:center">
   <rect x="0" y="78" width="264" height="30" fill="var(--gold)" class="growx" style="--del:1s"/>
   <text x="274" y="99" class="lab" style="font-size:16px;fill:var(--gold);opacity:0;animation:rise .6s ease 1.7s both">37, today</text>
 
-  <text x="0" y="152" class="lab" style="font-size:12px">STATUS AT LISTING</text>
+  <text x="0" y="152" class="lab" style="font-size:12px">STATUS AT LISTING &#183; 1 IS MOST URGENT</text>
   ${[['Status 1',17,170,'var(--red)',1.9],['Status 2',11,110,'var(--amber)',2.1],
      ['Status 4',6,60,'var(--cyan)',2.3],['Status 3',1,12,'var(--slate)',2.5],['Status 7',1,12,'var(--slate)',2.7]]
    .map((r,i)=>`
@@ -1287,16 +1291,7 @@ html:`<div class="eyebrow">Lever 02 · The donor</div>
   </foreignObject>
  </svg></div>
  <p class="sub" data-frag>Distance stopped being the limit once the box could hold 10&nbsp;&#176;C. <strong>Controlled hypothermic transport</strong> is what made a longer retrieval a decision rather than a gamble.</p>
-  <p class="sub" data-frag>None of these were reckless. All of them were <em>affordable</em>, which is a different word, and the honest one.</p>`},
-
-{heat:2,vol:61,phase:'Lever 02',
-notes:'The audit nobody runs. We started asking why we said no, in a forum, every time. That single habit changed acceptance behaviour more than any policy.',
-html:`<div class="split">
- <div>
-  <div class="eyebrow">Lever 02 · The audit</div>
-  <h2>We started asking why we said no</h2>
-  <p data-frag>Not to second-guess the person on call. To make declining a <strong>decision with a record</strong> rather than a reflex with none.</p>
-  <p class="sub" data-frag>Most programmes cannot tell you why they refused their last ten offers. We can.</p>
+  <p class="sub" data-frag>Most programs cannot tell you why they refused their last ten offers. We can.</p>
  </div>
  <div class="stagew"><svg viewBox="0 0 440 300" aria-label="Declines reviewed and reversed">
   ${Array.from({length:20},(_,i)=>{const x=40+(i%5)*84,y=40+Math.floor(i/5)*66,rev=i%5===1||i%5===3;
@@ -1306,6 +1301,27 @@ html:`<div class="split">
     ${rev?`<path d="M${x-11},${y} L${x-3},${y+8} L${x+12},${y-9}" fill="none" stroke="var(--gold)" stroke-width="2.6"
       class="draw" style="--len:40;--dur:.4s;--del:${1.4+i*.05}s"/>`:''}</g>`;}).join('')}
   <text x="40" y="286" class="lab" style="font-size:13px" fill="var(--gold)">REVERSIBLE ON SECOND LOOK</text>
+ </svg></div>
+</div>`},
+
+{heat:2,vol:61,phase:'Lever 02',
+notes:'',
+html:`<div class="split" style="align-items:center">
+ <div>
+  <div class="eyebrow">Lever 02 &#183; the audit</div>
+  <h2>We started asking why we said no</h2>
+  <p data-frag>Not to second-guess the person on call. To make declining a <strong>decision with a record</strong> rather than a reflex with none.</p>
+  <p class="sub" data-frag>Most programs cannot tell you why they refused their last ten offers. <em>We can.</em></p>
+  <p class="sub" data-frag>A decline reviewed in a room, with the offer in front of you and no one in a hurry, is a different decision from one made alone at two in the morning.</p>
+ </div>
+ <div class="stagew"><svg viewBox="0 0 440 300" aria-label="Declines reviewed, some reversible">
+  ${Array.from({length:20},(_,i)=>{const x=44+(i%5)*84,y=40+Math.floor(i/5)*66,rev=i%5===1||i%5===3;
+   return `<g class="pop" style="--del:${i*.05}s">
+    <rect x="${x-26}" y="${y-18}" width="52" height="36" rx="2" fill="none"
+      stroke="${rev?'var(--gold)':'var(--red)'}" stroke-width="2" opacity="${rev?1:.4}"/>
+    ${rev?`<path d="M${x-11},${y} L${x-3},${y+8} L${x+12},${y-9}" fill="none" stroke="var(--gold)" stroke-width="2.6"
+      class="draw" style="--len:40;--dur:.4s;--del:${1.4+i*.05}s"/>`:''}</g>`;}).join('')}
+  <text x="18" y="286" class="lab" style="font-size:13px" fill="var(--gold)">REVERSIBLE ON SECOND LOOK</text>
  </svg></div>
 </div>`},
 
@@ -1321,7 +1337,7 @@ html:`<div class="eyebrow">How we grew</div>
    <text x="${b[3]+110}" y="264" text-anchor="middle" class="lab" style="opacity:0;animation:rise .7s ease ${.9+i*.45}s both">${b[0].toUpperCase()}</text>`).join('')}
   <text x="30" y="28" class="lab">MARGINAL TRANSPLANTS PER YEAR</text>
  </svg></div>
- <p class="sub" data-frag>Our trough was <strong>28</strong> in Jul '22 to Jun '23. Last year we did <strong>61</strong>. That is not a better year. It is <em>a different programme</em>.</p>
+ <p class="sub" data-frag>Our trough was <strong>28</strong> in Jul '22 to Jun '23. Last year we did <strong>61</strong>. That is not a better year. It is <em>a different program</em>.</p>
  <p class="mono" data-frag style="margin-top:.6rem">Decomposition proportions illustrative; volumes are real (July-to-July).</p>`},
 
 {heat:1,vol:44,phase:'The argument',
@@ -1369,7 +1385,7 @@ html:`<div class="split">
   <p class="lede sub" data-frag>Thirty birds arrived, and beheld the Simorgh.</p>
   <p class="sub" data-frag>They crossed seven valleys to find their sovereign. Most turned back. Most died on the way.</p>
   <p class="sub" data-frag>The thirty who arrived found a mirror. <em>Sī morgh</em>: thirty birds. The thing they had crossed the world to find was the <strong>assembly of themselves</strong>.</p>
-  <p class="lede sub" data-frag>We did not go out and acquire innovation. We became the kind of programme that could produce it.</p>
+  <p class="lede sub" data-frag>We did not go out and acquire innovation. We became the kind of program that could produce it.</p>
  </div>
  <div class="stagew"><svg viewBox="0 0 400 400" aria-label="Thirty birds converge and become the Simorgh">
   <circle cx="200" cy="200" r="150" fill="none" stroke="var(--gold)" stroke-width="1" opacity=".3"/>
@@ -1459,7 +1475,7 @@ html:`<div class="split" style="align-items:center">
   <h2 class="cine">Open the list</h2>
   <ul class="sub">
    <li data-frag><strong>Sensitized recipients listed, not deferred.</strong> Desensitization as routine practice rather than a rescue, and a defined crossmatch treated as a risk we can quantify.</li>
-   <li data-frag><strong>ABO-incompatible listing in adults.</strong> The paediatric evidence is in and the adult registry shows no difference since 2005. We should be among the programmes that find out properly.</li>
+   <li data-frag><strong>ABO-incompatible listing in adults.</strong> The paediatric evidence is in and the adult registry shows no difference since 2005. We should be among the programs that find out properly.</li>
   </ul>
   <p class="sub" data-frag>Each ring is a group of patients who are currently told to wait, or told nothing at all.</p>
  </div>
@@ -1480,7 +1496,7 @@ notes:'',
 html:`<div class="split" style="align-items:center">
  <div>
   <div class="eyebrow">Year three &#183; 2029</div>
-  <h2 class="cine">Become the programme others build on</h2>
+  <h2 class="cine">Become the program others build on</h2>
   <ul class="sub">
    <li data-frag><strong>Volume that sustains itself</strong>, with enough cases that these capabilities stop being projects and become how we run.</li>
    <li data-frag><strong>Shared allocation</strong>, with Toronto as a working hub rather than an aspiration.</li>
@@ -1653,7 +1669,7 @@ html:`<div class="eyebrow">Conclusions</div>
   <li data-frag><strong>Nothing here is free.</strong> Fifteen years comes with vasculopathy, cancer, kidney disease.</li>
  </ul>
  <p class="lede sub" data-frag>Nobody on that waiting list needed us to be brave. They needed us to be <em>large enough that bravery cost them nothing.</em></p>
-  <p class="lede sub" data-frag>Courage in a transplant programme is not a temperament. It is <strong>a denominator</strong>, and you have to build it.</p>`}
+  <p class="lede sub" data-frag>Courage in a transplant program is not a temperament. It is <strong>a denominator</strong>, and you have to build it.</p>`}
 ];
 
 /* ================= ENGINE ================= */
