@@ -216,6 +216,10 @@ svg text{font-family:"IBM Plex Mono",monospace;fill:var(--dim);font-weight:500}
 .clip-by{font-family:"IBM Plex Mono",monospace;font-size:12.5px;letter-spacing:.1em;color:var(--dim);margin-top:.6rem}
 .clip-note{font-size:clamp(13px,calc(.62vw + .62vh),16.5px);line-height:1.5;color:var(--dim);margin-top:.9rem}
 
+.refline{font-family:"IBM Plex Mono",monospace;font-size:clamp(11px,1.05vw,13.5px);
+  line-height:1.5;color:var(--dim);margin-top:1rem;padding-top:.65rem;
+  border-top:1px solid rgba(0,0,0,.14);max-width:62ch}
+
 /* ---------- section dividers ---------- */
 .sectdiv{max-width:34ch}
 .sd-n{font-family:"IBM Plex Mono",monospace;font-weight:600;font-size:clamp(13px,1.4vw,18px);
@@ -718,10 +722,9 @@ html:`<div class="split" style="align-items:center">
  <div>
   <div class="eyebrow">What a transplant actually buys</div>
   <h2>A median of fifteen years</h2>
-  <p data-frag>Roughly <strong>90%</strong> alive at one year. <strong>80%</strong> at five. About <strong>half</strong> at ten.</p>
+  <p data-frag>Roughly <strong>90%</strong> alive at one year. <strong>80%</strong> at five. About <strong>two thirds</strong> at ten, and <strong>half</strong> at fifteen.</p>
   <p class="sub" data-frag>For someone dying of heart failure that is an extraordinary offer. It is also, plainly, <em>not a cure</em>. We exchange one fatal disease for a chronic one that has to be managed for the rest of a life.</p>
-  <blockquote class="pullq" data-frag>&ldquo;Organ transplantation is mired in stagnant science and antiquated, imprecise medicine.&rdquo;</blockquote>
-  <p class="sub" data-frag>Amy Silverstein lived thirty-five years with two donor hearts and wrote that weeks before dying of an immunosuppression-related cancer. She acknowledged the irony of a twice-transplanted survivor making the case, and argued that her longevity was precisely what gave her the standing to challenge the status quo.</p>
+  <p class="sub" data-frag>For someone dying of heart failure that is an extraordinary offer. It is also, plainly, not a cure.</p>
   <p class="mono sub" data-frag>ISHLT Thoracic Organ Transplant Registry, most recent report. Amy Silverstein, New York Times, 18 April 2023.</p>
  </div>
  <div class="stagew"><svg viewBox="0 0 470 310" aria-label="Survival after adult heart transplantation">
@@ -822,6 +825,36 @@ ${[['Donor','33 F &#183; 159 cm &#183; 76.8 kg &#183; BMI 30.4 &#183; O Pos'],
  </div>
 </div>`},
 
+{heat:0,vol:61,phase:'Off hours',
+notes:'',
+html:`<div class="split" style="align-items:center">
+ <div>
+  <div class="eyebrow">A bias we went looking for</div>
+  <h2>Are we more likely to decline on a weekend?</h2>
+  <p data-frag>The field has already tested the <em>mystical</em> explanations. A UNOS review of a decade of adult transplants found that full moons and Friday the 13th changed nothing: not donors, not recipients, not outcomes, not volume.</p>
+  <p class="sub" data-frag>So we tested the mundane one. It is the obvious worry. Offers arrive overnight, at Christmas, on a long weekend, when the retrieval team is thinnest and the person on call is alone.</p>
+  <p class="sub" data-frag>We tested it across <strong>1,216 offers</strong> with a decision and a date. Weekday acceptance <strong>22.3%</strong>. Weekend <strong>24.7%</strong>. Statutory holidays <strong>27.6%</strong>.</p>
+  <p class="sub" data-frag>No difference in any direction that the numbers can support. <em>The bias we expected to find is not there.</em></p>
+  <p class="mono sub" data-frag>Weekend vs weekday p = 0.39. Weekend or holiday vs weekday p = 0.25. DCD offers alone, 40.9% vs 37.3%, p = 0.65.</p>
+  <p class="refline" data-frag>Goodnight Moon: the (not so) mystical effect of folklore and superstitions on cardiac transplantation. <em>J Heart Lung Transplant</em>, 2024. UNOS adult transplants 2013&ndash;2023. Confirm authors, volume and pages before presenting.</p>
+ </div>
+ <div class="stagew"><svg viewBox="0 0 470 320" aria-label="Donor offer acceptance by day of week">
+  <line x1="52" y1="240" x2="452" y2="240" stroke="var(--dim)" stroke-width="1" opacity=".3"/>
+  <line x1="52" y1="40" x2="52" y2="240" stroke="var(--dim)" stroke-width="1" opacity=".3"/>
+  <text x="44" y="46" text-anchor="end" style="font-size:12px">40%</text>
+  <text x="44" y="244" text-anchor="end" style="font-size:12px">0</text>
+  <line x1="52" y1="128" x2="452" y2="128" stroke="var(--dim)" stroke-width="1" stroke-dasharray="5 5" opacity=".45"/>
+  <text x="456" y="132" class="lab" style="font-size:11.5px;fill:var(--dim)">22.8% overall</text>
+  ${[['Mon',19.5,169],['Tue',22.9,210],['Wed',20.0,175],['Thu',27.0,159],['Fri',22.1,199],['Sat',22.8,167],['Sun',27.0,137]]
+    .map((d,i)=>{const x=74+i*54, h=200*d[1]/40, wknd=i>=5;
+    return `<rect x="${x-17}" y="${240-h}" width="34" height="${h}" rx="1" fill="${wknd?'var(--gold)':'var(--slate)'}" opacity=".9" class="growup" style="--del:${.3+i*.12}s"/>
+    <text x="${x}" y="${232-h}" text-anchor="middle" style="font-size:12px;font-weight:600;fill:${wknd?'var(--gold)':'var(--slate)'};opacity:0;animation:rise .5s ease ${.9+i*.12}s both">${d[1]}</text>
+    <text x="${x}" y="260" text-anchor="middle" style="font-size:11.5px">${d[0]}</text>`;}).join('')}
+  <text x="52" y="292" class="lab" style="font-size:12.5px;fill:var(--dim)">ACCEPTANCE RATE &#183; 1,216 OFFERS</text>
+  <text x="52" y="312" class="lab" style="font-size:12.5px;fill:var(--gold);opacity:0;animation:rise .7s ease 2.2s both">WEEKEND</text>
+ </svg></div>
+</div>`},
+
 {heat:0,vol:32,phase:'The trap',
 notes:'The loop runs backwards. Say it plainly: a small programme is structurally punished for taking chances, so it stops taking them, so it stays small. This is not a failure of courage. It is arithmetic.',
 html:`<div class="split">
@@ -917,28 +950,29 @@ html:`<div class="eyebrow">The pivot</div>
   <div class="dash-hd">
    <span class="dot"></span><span class="mono">transplant-dev.heartfunction.ca</span>
    <span class="mono live-tag">LIVE</span>
-   <span class="mono" style="margin-left:auto">JUL 2020 – JUN 2026</span>
+   <span class="mono" style="margin-left:auto">n = 254 &#183; ALL YEARS</span>
   </div>
 
   <div class="kpis">
-   ${[['ICU LOS','d',6.4,0],['POST-HTx LOS','d',21.8,.12],['VENT DAYS','d',2.1,.24],
-      ['TRACHEOSTOMY','%',4.0,.36],['DIALYSIS','%',11.0,.48],['SEVERE PGD','%',9.0,.6]]
+   ${[['SEVERE PGD','%',13.0,0,'33 / 254'],['VASOPLEGIA','%',45.4,.12,'108 / 238'],
+      ['ICU LOS','d',8,.24,'median, n = 79'],['POST-HTx LOS','d',17,.36,'median, n = 201'],
+      ['DIALYSIS','%',32.9,.48,'82 / 249'],['30-DAY SURVIVAL','%',91.3,.6,'22 deaths / 253']]
      .map(k=>`<div class="kpi cine" style="--del:${k[3]}s">
         <span class="kl">${k[0]}</span>
-        <span class="kv" data-count="${k[2]}" data-dec="${k[1]==='%'?0:1}" data-del="${400+k[3]*1000}">0</span><span class="ku">${k[1]}</span>
-        <span class="spark"><i style="--w:${40+Math.random()*45}%"></i></span>
+        <span class="kv" data-count="${k[2]}" data-dec="${Number.isInteger(k[2])?0:1}" data-del="${400+k[3]*1000}">0</span><span class="ku">${k[1]}</span>
+        <span class="kl" style="margin-top:.3rem;font-size:10.5px;opacity:.8">${k[4]}</span>
       </div>`).join('')}
   </div>
 
   <div class="dash-body">
    <div class="panel">
-    <span class="pt">TRANSPLANTS · JULY TO JULY</span>
+    <span class="pt">TRANSPLANTS BY CALENDAR YEAR</span>
     <svg viewBox="0 0 420 150" aria-label="Annual transplant volume">
-     ${[[37,'20/21'],[32,'21/22'],[28,'22/23'],[44,'23/24'],[37,'24/25'],[61,'25/26']].map((v,i)=>`
-       <rect x="${26+i*66}" y="${130-v[0]*1.9}" width="44" height="${v[0]*1.9}" rx="1"
-         fill="${i===5?'var(--gold)':(i===2?'var(--red)':'var(--slate)')}" opacity=".9" class="growup" style="--del:${.5+i*.13}s"/>
-       <text x="${48+i*66}" y="${124-v[0]*1.9}" text-anchor="middle" style="font-size:12px;font-weight:600;fill:var(--ink)">${v[0]}</text>
-       <text x="${48+i*66}" y="146" text-anchor="middle" style="font-size:10.5px">${v[1]}</text>`).join('')}
+     ${[[35,'2020'],[34,'2021'],[20,'2022'],[43,'2023'],[38,'2024'],[44,'2025'],[40,'2026']].map((v,i)=>`
+       <rect x="${20+i*57}" y="${130-v[0]*2.4}" width="38" height="${v[0]*2.4}" rx="1"
+         fill="${i===6?'var(--gold)':(i===2?'var(--red)':'var(--slate)')}" opacity=".9" class="growup" style="--del:${.5+i*.12}s"/>
+       <text x="${39+i*57}" y="${124-v[0]*2.4}" text-anchor="middle" style="font-size:12px;font-weight:600;fill:var(--ink)">${v[0]}</text>
+       <text x="${39+i*57}" y="146" text-anchor="middle" style="font-size:10.5px">${v[1]}</text>`).join('')}
      <line x1="10" y1="130" x2="410" y2="130" stroke="var(--dim)" stroke-width="1" opacity=".3"/>
     </svg>
    </div>
@@ -1062,25 +1096,30 @@ notes:'',
 html:`<div class="split" style="align-items:center">
  <div>
   <div class="eyebrow">Our own numbers</div>
-  <h2>We doubled the volume. Severe PGD did not follow.</h2>
-  <p data-frag>Severe primary graft dysfunction, defined as requiring <strong>ECMO or mechanical support after transplant</strong>, runs at <strong>13.8%</strong> across the programme. Thirty-six recipients of the 260 with the field recorded.</p>
-  <p class="sub" data-frag>It was <strong>20%</strong> in 2020. Every year since it has sat between 10% and 14%, while annual volume more than doubled.</p>
-  <p class="sub" data-frag>We took more marginal donors, longer distances, sicker recipients. <em>The rate held.</em> That is what a risk budget looks like when it is spent well.</p>
-  <p class="mono sub" data-frag>Post-transplant ECMO, BiVAD, VV ECMO or other mechanical support. 12.2% if all 296 transplants are used as the denominator.</p>
+  <h2>Severe PGD sits at 13%, and the risk is not evenly spread</h2>
+  <p data-frag>Across all 254 transplants: <strong>33 cases, 13.0%</strong>. Year to date it is <strong>12.5%</strong>, five of forty.</p>
+  <p class="sub" data-frag>Split by donor type this year, it is <strong>9.4% after DBD</strong> and <strong>25% after DCD</strong>. That is the price of the pool we opened, stated plainly.</p>
+  <p class="sub" data-frag>DCD was <strong>3.9%</strong> of our transplants across all years. This year it is <strong>20%</strong>. <em>We knew what we were buying.</em></p>
+  <p class="mono sub" data-frag>Severe PGD defined as post-transplant mechanical support. Programme dashboard, source 27 July 2026.</p>
  </div>
- <div class="stagew"><svg viewBox="0 0 480 320" aria-label="Severe PGD rate and annual volume by year">
-  <line x1="46" y1="250" x2="470" y2="250" stroke="var(--dim)" stroke-width="1" opacity=".3"/>
-  <line x1="46" y1="40" x2="46" y2="250" stroke="var(--dim)" stroke-width="1" opacity=".3"/>
-  <text x="38" y="46" text-anchor="end" style="font-size:12px">25%</text>
-  <text x="38" y="254" text-anchor="end" style="font-size:12px">0</text>
-  ${[[2019,10.0,10],[2020,20.0,35],[2021,14.7,34],[2022,10.0,20],[2023,10.9,46],[2024,13.2,38],[2025,13.6,44],[2026,12.2,41]]
-    .map((d,i)=>{const x=68+i*52, h=(250-40)*d[1]/25, vh=(250-40)*(d[2]/70);
-    return `<rect x="${x-16}" y="${250-vh}" width="32" height="${vh}" fill="var(--slate)" opacity=".14" class="growup" style="--del:${.3+i*.1}s"/>
-    <rect x="${x-9}" y="${250-h}" width="18" height="${h}" rx="1" fill="${d[1]>=15?'var(--red)':'var(--cyan)'}" opacity=".95" class="growup" style="--del:${.6+i*.11}s"/>
-    <text x="${x}" y="${242-h}" text-anchor="middle" style="font-size:12px;font-weight:600;fill:${d[1]>=15?'var(--red)':'var(--cyan)'};opacity:0;animation:rise .5s ease ${1.1+i*.11}s both">${d[1]}</text>
-    <text x="${x}" y="270" text-anchor="middle" style="font-size:11.5px">${String(d[0]).slice(2)}</text>`;}).join('')}
-  <text x="46" y="298" class="lab" style="font-size:12px;fill:var(--cyan)">SEVERE PGD, %</text>
-  <text x="290" y="298" class="lab" style="font-size:12px;fill:var(--slate)">ANNUAL VOLUME</text>
+ <div class="stagew"><svg viewBox="0 0 470 330" aria-label="Severe PGD by donor type and DCD growth">
+  <text x="0" y="18" class="lab" style="font-size:13px">SEVERE PGD BY DONOR TYPE &#183; 2026</text>
+  <text x="0" y="62" class="lab" style="font-size:14px;fill:var(--ink)">DBD</text>
+  <rect x="86" y="46" width="94" height="24" fill="var(--cyan)" class="growx" style="--del:.4s"/>
+  <text x="190" y="64" class="lab" style="font-size:14px;fill:var(--cyan);opacity:0;animation:rise .6s ease 1.2s both">9.4%</text>
+  <text x="0" y="108" class="lab" style="font-size:14px;fill:var(--ink)">DCD</text>
+  <rect x="86" y="92" width="250" height="24" fill="var(--red)" class="growx" style="--del:1s"/>
+  <text x="346" y="110" class="lab" style="font-size:14px;fill:var(--red);opacity:0;animation:rise .6s ease 1.8s both">25%</text>
+
+  <line x1="0" y1="146" x2="450" y2="146" stroke="var(--dim)" stroke-width="1" opacity=".22"/>
+  <text x="0" y="178" class="lab" style="font-size:13px">DCD SHARE OF OUR TRANSPLANTS</text>
+  <text x="0" y="222" class="lab" style="font-size:14px;fill:var(--ink)">All years</text>
+  <rect x="120" y="206" width="16" height="24" fill="var(--slate)" class="growx" style="--del:2.2s"/>
+  <text x="146" y="224" class="lab" style="font-size:14px;fill:var(--slate);opacity:0;animation:rise .6s ease 2.9s both">3.9%  &#183;  10 / 254</text>
+  <text x="0" y="268" class="lab" style="font-size:14px;fill:var(--ink)">2026</text>
+  <rect x="120" y="252" width="82" height="24" fill="var(--gold)" class="growx" style="--del:2.6s"/>
+  <text x="212" y="270" class="lab" style="font-size:14px;fill:var(--gold);opacity:0;animation:rise .6s ease 3.3s both">20%  &#183;  8 / 40</text>
+  <text x="0" y="312" class="lab" style="font-size:12.5px;fill:var(--gold);opacity:0;animation:rise .7s ease 3.6s both">ALL EIGHT ON MACHINE PERFUSION</text>
  </svg></div>
 </div>`},
 
@@ -1335,7 +1374,7 @@ html:`<div class="split">
    <li data-frag><strong>Severe PGD under 5%.</strong> The target, stated plainly, and reported against.</li>
    <li data-frag><strong>Risk assessed before the cross-clamp</strong>, with predictive models feeding a prevention protocol rather than a post-hoc explanation.</li>
    <li data-frag><strong>Standardized preservation, OR, and perioperative practice.</strong> Fewer ways to do it; better ways to do it.</li>
-   <li data-frag><strong>Gradual rewarming</strong> at reperfusion rather than an abrupt return to temperature.</li>
+   <li data-frag><strong>Gradual rewarming</strong> at reperfusion rather than an abrupt return to temperature, and <strong>defined perfusion targets on pump</strong>: a stated mean arterial pressure, flow index and haematocrit, with a lactate the team is expected to act on rather than observe.</li>
    <li data-frag><strong>Selective angiotensin II</strong> for vasoplegia, used by protocol rather than as rescue.</li>
    <li data-frag><strong>PROTECT-PGD enrolling</strong> across Canadian sites.</li>
   </ul>
@@ -1514,7 +1553,7 @@ html:`<div class="split" style="align-items:center">
     </div>
     <div class="panel">
      <span class="pt">HAVE READY</span>
-     ${['Controlled hypothermic transport','Donor management: T3, vasopressin, steroid','Gradual rewarming, inhaled nitric oxide','Angiotensin II if vasoplegic']
+     ${['Controlled hypothermic transport','Donor management: T3, vasopressin, steroid','Perfusion targets on pump: MAP, flow, haematocrit','Gradual rewarming, inhaled nitric oxide','Angiotensin II if vasoplegic']
       .map((m,i)=>`<div style="font-size:13.5px;line-height:1.4;padding-left:.85rem;position:relative;margin-bottom:.42rem;opacity:0;animation:rise .5s ease ${1.6+i*.22}s both">
         <span style="position:absolute;left:0;top:.55em;width:7px;height:1px;background:var(--gold)"></span>${m}</div>`).join('')}
     </div>
