@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Big Enough to Be Brave</title>
+<title>What We Owe the List</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;600&family=Noto+Nastaliq+Urdu:wght@400;600&display=swap" rel="stylesheet">
@@ -234,6 +234,9 @@ svg text{font-family:"IBM Plex Mono",monospace;fill:var(--dim);font-weight:500}
 .dev-s{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.09em;
   text-transform:uppercase;color:var(--dim);margin-top:.15rem}
 
+.tightlist li{margin-bottom:.5rem;line-height:1.42}
+.tightlist{max-width:60ch}
+
 /* ---------- section dividers ---------- */
 .sectdiv{max-width:34ch}
 .sd-n{font-family:"IBM Plex Mono",monospace;font-weight:600;font-size:clamp(13px,1.4vw,18px);
@@ -455,8 +458,8 @@ notes:'Title does the work — say it, pause, then go straight into the nushdaru
 html:`<div class="split" style="height:100%;align-items:center">
  <div>
  <div class="eyebrow cine" style="--del:.1s">Medical Grand Rounds</div>
- <h1 class="cine" style="--del:.3s">Big Enough<br>to Be Brave</h1>
- <p class="lede sub cine" style="--del:.85s">What volume made possible: the harder donor, the harder patient, the trial worth running, and the room to be wrong occasionally and survive it.</p>
+ <h1 class="cine" style="--del:.3s">What We Owe<br>the List</h1>
+ <p class="lede sub cine" style="--del:.85s">Transplantation will never be the efficient use of a health care dollar. It is still an obligation, and meeting it takes a program large enough to try.</p>
  <div class="sub cine" style="--del:1.25s">
   <div class="byline">
    <div class="person">
@@ -1153,7 +1156,7 @@ html:`<div class="eyebrow">The argument</div>
     <text x="0" y="${34+i*48}" class="lab" fill="${b[3]}">${b[1]}</text>
     <rect x="130" y="${18+i*48}" width="${b[2]}" height="22" fill="${b[3]}" class="growx" style="--del:${b[4]}s"/>
     <text x="${142+b[2]}" y="${34+i*48}" class="lab" fill="${b[3]}"
-      style="opacity:0;animation:rise .6s ease ${b[4]+.7}s both">${['NO ROOM','SOME ROOM','REAL ROOM','ROOM TO EXPERIMENT'][i]}</text>`).join('')}
+      style="opacity:0;animation:rise .6s ease ${b[4]+.7}s both">${['NO ROOM','SOME ROOM','REAL ROOM','ROOM FOR RESEARCH'][i]}</text>`).join('')}
  </svg></div>
  <p class="lede sub" data-frag>Not a licence for carelessness. <strong>Statistical room to be wrong</strong>, and every innovation we have made was spent out of that room.</p>`},
 
@@ -1295,7 +1298,7 @@ html:`<div class="eyebrow">Lever 02 · The donor</div>
   ${[['Coronary disease on angiogram','ACCEPTED',''],
      ['Predicted heart mass mismatch','ACCEPTED',''],
      ['Longer retrieval distances','ACCEPTED','controlled hypothermic transport'],
-     ['Marginal HCV-positive donors','ACCEPTED',''],
+     ['Extended criteria HCV-positive donors','ACCEPTED',''],
      ['Sensitized recipient','LISTED','']]
    .map((t,i)=>{const y=42+i*50;
    return `
@@ -1359,7 +1362,7 @@ notes:'Four things we could not have attempted at forty a year. Each one is a ch
 html:`<div class="eyebrow">What the budget bought</div>
  <h2>Four things we could not have tried at forty</h2>
  <div class="cols">
-  <div class="card" data-frag><span class="n">01</span><h3>Marginal donors</h3><p>Older, longer distance, coronary disease, impaired first echo. Each acceptance is a bet the denominator can absorb.</p></div>
+  <div class="card" data-frag><span class="n">01</span><h3>Extended criteria donors</h3><p>Older, longer distance, coronary disease, impaired first echo. Each acceptance is a bet the denominator can absorb.</p></div>
   <div class="card" data-frag><span class="n">02</span><h3>DCD retrieval</h3><p>A new pathway, a new team, and a learning curve you must be able to survive publicly.</p></div>
   <div class="card" data-frag><span class="n">03</span><h3>Randomizing</h3><p>PROTECT-PGD. A trial is a formal admission that you do not know, affordable only above a certain volume.</p></div>
   <div class="card" data-frag><span class="n">04</span><h3>Sensitized recipients</h3><p>The patients nobody else will list. The hardest, most rewarding use of the budget.</p></div>
@@ -1674,17 +1677,16 @@ html:`<div class="split">
 {heat:3,vol:61,phase:'Conclusions',
 notes:'',
 html:`<div class="eyebrow">Conclusions</div>
- <h2>Six things</h2>
- <ul style="max-width:62ch">
-  <li data-frag><strong>Transplantation will never win an efficiency argument. That is not the reason to do it.</strong></li>
-  <li data-frag><strong>28 to 61 transplants a year</strong>, and one in seven still leaves the list without one.</li>
+ <h2>What we would ask you to take away</h2>
+ <ul class="tightlist">
+  <li data-frag><strong>Transplantation will never win an efficiency argument.</strong> That is not the reason to do it.</li>
+  <li data-frag><strong>28 to 61 a year</strong>, and one in seven still leaves the list without a transplant.</li>
   <li data-frag><strong>The gaps are at the front door, not the operating room.</strong></li>
-  <li data-frag><strong>An academic centre owes exploration.</strong> Modest growth is what makes it possible.</li>
-  <li data-frag><strong>Nothing here is free.</strong> Fifteen years comes with vasculopathy, cancer, kidney disease.</li>
-  <li data-frag><strong>The method is the part that generalizes.</strong> Measure everything, correct quickly, build so you can change your mind. That is worth more to this hospital than the transplants.</li>
+  <li data-frag><strong>An academic centre owes exploration.</strong> Modest growth makes it possible.</li>
+  <li data-frag><strong>Nothing here is free.</strong> Fifteen years comes with vasculopathy, cancer and kidney disease.</li>
+  <li data-frag><strong>The method is what generalizes.</strong> Measure everything, correct quickly, build so you can change your mind.</li>
  </ul>
- <p class="lede sub" data-frag>Nobody on that waiting list needed us to be brave. They needed us to be <em>large enough that bravery cost them nothing.</em></p>
-  <p class="lede sub" data-frag>Courage in a transplant program is not a temperament. It is <strong>a denominator</strong>, and you have to build it.</p>`}
+ <p class="lede sub" data-frag>Nobody on that waiting list needed us to be brave. They needed us to be <em>large enough that bravery cost them nothing.</em></p>`}
 ];
 
 /* ================= ENGINE ================= */
